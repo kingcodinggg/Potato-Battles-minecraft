@@ -47,6 +47,7 @@ public class fiftyfiftyEvents implements Listener {
                 gui.getInventory().removeItem(item);
                 //playeractive = false;
                 System.out.println("WIN " + winWeight);
+                player.sendMessage("You Win. Congrats!");
 
             }
             else{
@@ -54,7 +55,7 @@ public class fiftyfiftyEvents implements Listener {
                 gui.getInventory().removeItem(item);
                 //playeractive = false;
                 System.out.println("LOSE " + winWeight);
-
+                player.sendMessage("You Lose. Better Luck Next Time!");
 
             }
        }, 60);
