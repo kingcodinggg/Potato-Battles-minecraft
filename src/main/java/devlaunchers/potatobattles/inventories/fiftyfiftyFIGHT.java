@@ -54,7 +54,7 @@ public class fiftyfiftyFIGHT implements InventoryHolder {
 
             }
         }
-        for (int i = 2; i < 6; i++) {
+        for (int i = 2; i < 7; i++) {
             //creating item
             item = createItem(ChatColor.GREEN + "Please Wait 3 Seconds", Material.GREEN_STAINED_GLASS_PANE, Collections.singletonList(ChatColor.DARK_RED + "Good Luck!"));
             inv.setItem(i, item);

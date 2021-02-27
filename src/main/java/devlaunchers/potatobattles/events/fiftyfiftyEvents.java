@@ -11,6 +11,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 public class fiftyfiftyEvents implements Listener {
@@ -59,5 +60,39 @@ public class fiftyfiftyEvents implements Listener {
 
             }
        }, 60);
+        Bukkit.getScheduler().runTaskLater(PotatoBattles.getInstance(), () -> {
+                ItemStack item = gui.getInventory().getItem(2);
+                gui.getInventory().setContents(removeItemAtIndex(gui.getInventory(), 2));
+        }, 20);
+
+        Bukkit.getScheduler().runTaskLater(PotatoBattles.getInstance(), () -> {
+                ItemStack item = gui.getInventory().getItem(6);
+            gui.getInventory().setContents(removeItemAtIndex(gui.getInventory(), 6));
+        }, 20);
+
+        Bukkit.getScheduler().runTaskLater(PotatoBattles.getInstance(), () -> {
+                ItemStack item = gui.getInventory().getItem(3);
+            gui.getInventory().setContents(removeItemAtIndex(gui.getInventory(), 3));
+        }, 40);
+
+        Bukkit.getScheduler().runTaskLater(PotatoBattles.getInstance(), () -> {
+                ItemStack item = gui.getInventory().getItem(5);
+            gui.getInventory().setContents(removeItemAtIndex(gui.getInventory(), 5));
+
+        }, 40);
+
+        Bukkit.getScheduler().runTaskLater(PotatoBattles.getInstance(), () -> {
+            ItemStack item = gui.getInventory().getItem(4);
+            gui.getInventory().setContents(removeItemAtIndex(gui.getInventory(), 4));
+
+        }, 60);
+
+
+    }
+    public ItemStack[] removeItemAtIndex(Inventory inventory, int index) {
+        ItemStack[] itemStacks = inventory.getContents();
+        itemStacks[index] = new ItemStack(Material.AIR);
+
+        return itemStacks;
     }
 }
