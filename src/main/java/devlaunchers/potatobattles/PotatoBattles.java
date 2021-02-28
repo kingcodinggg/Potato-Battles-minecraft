@@ -1,9 +1,8 @@
 package devlaunchers.potatobattles;
 
 import devlaunchers.potatobattles.commands.SelectionCommands;
-import devlaunchers.potatobattles.events.SelectionEvents;
-import devlaunchers.potatobattles.events.fiftyfiftyEvents;
-import devlaunchers.potatobattles.events.fiftyfiftyFIGHTEvents;
+import devlaunchers.potatobattles.events.*;
+import devlaunchers.potatobattles.inventories.SpeedClickBattle;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class PotatoBattles extends JavaPlugin {
@@ -21,6 +20,8 @@ public final class PotatoBattles extends JavaPlugin {
      getServer().getPluginManager().registerEvents(new SelectionEvents(), this);
      getServer().getPluginManager().registerEvents(new fiftyfiftyEvents(), this);
      getServer().getPluginManager().registerEvents(new fiftyfiftyFIGHTEvents(), this);
+     getServer().getPluginManager().registerEvents(new SpeedClickEvents(), this);
+     getServer().getPluginManager().registerEvents(new SpeedClickBattleEvents(), this);
     }
 
     @Override

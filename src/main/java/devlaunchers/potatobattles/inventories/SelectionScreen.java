@@ -27,12 +27,12 @@ public class SelectionScreen implements InventoryHolder {
 
         //LEFT
         for (int i = 3; i < 4; i++) {
-            item = createItem(ChatColor.YELLOW + "Potato Battles v0.1", Material.POTATO, Collections.singletonList(ChatColor.DARK_RED + "Please select one of the following modes"));
+            item = createItem(ChatColor.YELLOW + "Potato Battles v0.7", Material.POTATO, Collections.singletonList(ChatColor.DARK_RED + "Please select one of the following modes"));
             inv.setItem(i, item);
         }
 
         for (int i = 5; i < 6; i++) {
-            item = createItem(ChatColor.YELLOW + "Potato Battles v0.1", Material.POTATO, Collections.singletonList(ChatColor.DARK_RED + "Please select one of the following modes"));
+            item = createItem(ChatColor.YELLOW + "Potato Battles v0.7", Material.POTATO, Collections.singletonList(ChatColor.DARK_RED + "Please select one of the following modes"));
             inv.setItem(i, item);
         }
 
@@ -47,6 +47,12 @@ public class SelectionScreen implements InventoryHolder {
             inv.setItem(i, item);
         }
 
+        for(int i = 25; i < 26; i++)
+        {
+            item = createItem(ChatColor.GREEN + "Speed Click", Material.DIAMOND_BOOTS, Collections.singletonList(ChatColor.DARK_PURPLE + "Click the button when it appears."));
+            item.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+            inv.setItem(i, item);
+        }
     }
 
     private ItemStack createItem(String name, Material mat, List<String> lore) {

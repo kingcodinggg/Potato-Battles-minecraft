@@ -1,6 +1,7 @@
 package devlaunchers.potatobattles.events;
 
 import devlaunchers.potatobattles.inventories.SelectionScreen;
+import devlaunchers.potatobattles.inventories.SpeedClick;
 import devlaunchers.potatobattles.inventories.fiftyfifty;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -23,6 +24,14 @@ public class SelectionEvents implements Listener {
                 //player.closeInventory();
 
                 fiftyfifty gui = new fiftyfifty();
+                player.openInventory(gui.getInventory());
+            }
+            if(e.getCurrentItem().getType() == Material.DIAMOND_BOOTS)
+            {
+                System.out.println("Speed Click Initiating...");
+                player.sendMessage(ChatColor.GREEN + "starting Speed Click...");
+
+                SpeedClick gui = new SpeedClick();
                 player.openInventory(gui.getInventory());
             }
         }
