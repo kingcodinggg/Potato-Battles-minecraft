@@ -35,6 +35,11 @@ public class SpeedClickEvents implements Listener {
                 player.openInventory(gui.getInventory());
             }
 
+            if (e.getCurrentItem().getType() == Material.RED_STAINED_GLASS_PANE) {
+                SelectionScreen gui2 = new SelectionScreen();
+                player.openInventory(gui2.getInventory());
+            }
+
         }
     }
 

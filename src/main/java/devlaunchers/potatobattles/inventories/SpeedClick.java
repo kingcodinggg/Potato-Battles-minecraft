@@ -46,6 +46,11 @@ public class SpeedClick implements InventoryHolder {
             inv.setItem(i, item);
         }
 
+        for (int i = 53; i < 54; i++) {
+            item = createItem(ChatColor.GREEN + "Back", Material.RED_STAINED_GLASS_PANE, Collections.singletonList(ChatColor.DARK_RED + "Go back to the mode selection screen"));
+            inv.setItem(i, item);
+        }
+
     }
 
     private ItemStack createItem(String name, Material mat, List<String> lore) {
