@@ -30,6 +30,10 @@ public class fiftyfiftyEvents implements Listener {
             if (e.getCurrentItem().getType() == Material.GREEN_STAINED_GLASS_PANE) {
                 JoinBattle(player);
             }
+            if (e.getCurrentItem().getType() == Material.RED_STAINED_GLASS_PANE) {
+                SelectionScreen gui2 = new SelectionScreen();
+                player.openInventory(gui2.getInventory());
+            }
         }
     }
 
