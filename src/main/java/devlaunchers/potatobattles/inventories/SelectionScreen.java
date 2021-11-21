@@ -10,10 +10,14 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.io.File;
 import java.util.Collections;
 import java.util.List;
 
 public class SelectionScreen implements InventoryHolder {
+
+
+
 
     private Inventory inv;
 
@@ -24,6 +28,9 @@ public class SelectionScreen implements InventoryHolder {
 
     private void init() {
         ItemStack item;
+
+
+
 
         //LEFT
         for (int i = 3; i < 4; i++) {

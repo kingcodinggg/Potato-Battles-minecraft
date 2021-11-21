@@ -7,6 +7,7 @@ import devlaunchers.potatobattles.inventories.SpeedClickBattle;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -34,6 +35,7 @@ public class SpeedClickBattleEvents implements Listener {
             }
             if (e.getCurrentItem().getType() == Material.GREEN_STAINED_GLASS_PANE) {
                 Clicked = true;
+                player.playSound(player.getLocation(), Sound.ENTITY_FIREWORK_ROCKET_LAUNCH, 1, 1);
                 player.sendMessage(ChatColor.GREEN + "You Win!");
                 SelectionScreen gui = new SelectionScreen();
                 player.openInventory(gui.getInventory());

@@ -2,7 +2,7 @@ name: PotatoBattles
 version: ${project.version}
 main: devlaunchers.potatobattles.PotatoBattles
 api-version: 1.16
-description: The official potato trading card game!!! Collect potatoes and battle them with other players!!!
+description: The official potato trading "potato" game!!! Collect potatoes and battle them with other players!!!
 commands:
   pb:
     description: opens the potato battles ui

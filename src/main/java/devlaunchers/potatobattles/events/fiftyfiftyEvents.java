@@ -7,6 +7,7 @@ import devlaunchers.potatobattles.inventories.fiftyfiftyFIGHT;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -48,8 +49,10 @@ public class fiftyfiftyEvents implements Listener {
                 gui.getInventory().removeItem(item);
                 //playeractive = false;
                 System.out.println("WIN " + winWeight);
+                player.playSound(player.getLocation(), Sound.ENTITY_FIREWORK_ROCKET_LAUNCH, 1, 1);
                 player.sendMessage(ChatColor.DARK_GREEN + "You Win. Congrats!");
-
+                SelectionScreen gui2 = new SelectionScreen();
+                player.openInventory(gui2.getInventory());
             }
             else{
                 ItemStack item = gui.getInventory().getItem(1);
@@ -57,7 +60,9 @@ public class fiftyfiftyEvents implements Listener {
                 //playeractive = false;
                 System.out.println("LOSE " + winWeight);
                 player.sendMessage(ChatColor.DARK_RED + "You Lose. Better Luck Next Time!");
-
+                player.playSound(player.getLocation(), Sound.BLOCK_GLASS_BREAK, 1, 1);
+                SelectionScreen gui2 = new SelectionScreen();
+                player.openInventory(gui2.getInventory());
             }
        }, 60);
         Bukkit.getScheduler().runTaskLater(PotatoBattles.getInstance(), () -> {
